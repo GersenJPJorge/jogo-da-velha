@@ -19,15 +19,11 @@ export class JogoDaVelhaService {
   private _showFinal: boolean;
 
   constructor() { }
-
-
   /**
    * Inicializa o jogo. Define exibição da tela inicial.
    *
    * @return void
    */
-  
-  
   
   inicializar(): void {
     this._showInicio = true;
@@ -38,7 +34,6 @@ export class JogoDaVelhaService {
     this.vitoria = false;
     this.inicializarTabuleiro();
   }
-
 
   /**
    * Inicializa o tabuleiro do jogo com vazio para todas 
@@ -53,7 +48,6 @@ export class JogoDaVelhaService {
       this.tabuleiro[i] = [this.VAZIO, this.VAZIO, this.VAZIO];
     }
   }
-
 
   /**
    * Retorna se a tela de início deve ser exibida.
@@ -108,7 +102,7 @@ iniciarJogo(): void {
     this._showInicio = false;
     this._showTabuleiro = true;
   }
-}
+
 
   /**
    * Realiza uma jogada dado as coordenadas do tabuleiro.
@@ -118,7 +112,7 @@ iniciarJogo(): void {
    * @return void
    */
 
-   /*
+  
   jogar(posX: number, posY: number): void {
     // jogada inválida
     if (this.tabuleiro[posX][posY] !== this.VAZIO || 
@@ -131,6 +125,7 @@ iniciarJogo(): void {
     this.vitoria = this.fimJogo(posX, posY, 
       this.tabuleiro, this._jogador);
     this._jogador = (this._jogador === this.X) ? this.O : this.X;
+    // se quem jogou é o X eu mudo para O, caso contrário, mudo para X
 
     if (!this.vitoria && this.numMovimentos < 9) {
       this.cpuJogar();
@@ -143,10 +138,11 @@ iniciarJogo(): void {
 
     // empate
     if (!this.vitoria && this.numMovimentos === 9) {
-      this._jogador = 0;
+      this._jogador = 0;   // deu empate
       this._showFinal = true;
     }
   }
+
 
   /**
    * Verifica e retorna se o jogo terminou.
@@ -158,7 +154,6 @@ iniciarJogo(): void {
    * @return array
    */
 
-   /*
   fimJogo(linha: number, coluna: number, 
       tabuleiro: any, jogador: number) {
     let fim: any = false;
@@ -199,7 +194,6 @@ iniciarJogo(): void {
    * @return void
    */
 
-   /*
   cpuJogar(): void {
     // verifica jogada de vitória
     let jogada: number[] = this.obterJogada(this.O);
@@ -210,7 +204,7 @@ iniciarJogo(): void {
     }
 
     if (jogada.length <= 0) {
-      // joga aleatório
+      // jogada aleatória  jogada aleatória  jogada aleatória  jogada aleatória  jogada aleatória
       let jogadas: any = [];
       for (let i=0; i<this.TAM_TAB; i++) {
         for (let j=0; j<this.TAM_TAB; j++) {
@@ -228,6 +222,7 @@ iniciarJogo(): void {
     this.vitoria = this.fimJogo(jogada[0], jogada[1],
         this.tabuleiro, this._jogador);
     this._jogador = (this._jogador === this.X) ? this.O : this.X;
+    // passa a vex para o oponente
   }
 
   /**
@@ -237,7 +232,7 @@ iniciarJogo(): void {
    * @return nomber[]
    */
 
-   /*
+  
   obterJogada(jogador: number): number[] {
     let tab = this.tabuleiro;
     for (let lin = 0; lin < this.TAM_TAB; lin++) {
@@ -257,42 +252,40 @@ iniciarJogo(): void {
 
   /**
    * Retorna se a peça X deve ser exibida para a 
-   * coordena informada.
+   * coordenada informada.
    *
    * @param number posX
    * @param number posY
    * @return boolean
    */
 
-   /*
+  
   exibirX(posX: number, posY: number): boolean {
     return this.tabuleiro[posX][posY] === this.X;
   }
 
   /**
    * Retorna se a peça O deve ser exibida para a 
-   * coordena informada.
+   * coordenada informada.
    *
    * @param number posX
    * @param number posY
    * @return boolean
    */
 
-   /*
   exibirO(posX: number, posY: number): boolean {
     return this.tabuleiro[posX][posY] === this.O;
   }
 
   /**
    * Retorna se a marcação de vitória deve ser exibida para a 
-   * coordena informada.
+   * coordenada informada.
    *
    * @param number posX
    * @param number posY
    * @return boolean
    */
 
-   /*
   exibirVitoria(posX: number, posY: number): boolean {
     let exibirVitoria: boolean = false;
 
@@ -316,11 +309,10 @@ iniciarJogo(): void {
    * @return void
    */
 
-   /*
   novoJogo(): void {
     this.inicializar();
     this._showFinal = false;
     this._showInicio = false;
     this._showTabuleiro = true;
   }
-*/
+}

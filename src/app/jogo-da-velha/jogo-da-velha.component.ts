@@ -57,7 +57,7 @@ export class JogoDaVelhaComponent implements OnInit {
    * @param number posY
    * @return void
    */
-  /*jogar(posX: number, posY: number): void {
+  jogar(posX: number, posY: number): void {
   	this.jogoDaVelhaService.jogar(posX, posY);
   }
 
@@ -69,7 +69,7 @@ export class JogoDaVelhaComponent implements OnInit {
    * @param number posY
    * @return boolean
    */
-  /*exibirX(posX: number, posY: number): boolean {
+  exibirX(posX: number, posY: number): boolean {
   	return this.jogoDaVelhaService.exibirX(posX, posY);
   }
 
@@ -81,7 +81,7 @@ export class JogoDaVelhaComponent implements OnInit {
    * @param number posY
    * @return boolean
    */
-  /*exibirO(posX: number, posY: number): boolean {
+  exibirO(posX: number, posY: number): boolean {
   	return this.jogoDaVelhaService.exibirO(posX, posY);
   }
 
@@ -93,7 +93,7 @@ export class JogoDaVelhaComponent implements OnInit {
    * @param number posY
    * @return boolean
    */
-  /*exibirVitoria(posX: number, posY: number): boolean {
+  exibirVitoria(posX: number, posY: number): boolean {
   	return this.jogoDaVelhaService.exibirVitoria(posX, posY);
   }
 

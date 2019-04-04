@@ -102,7 +102,7 @@ export class JogoDaVelhaComponent implements OnInit {
    * 
    * @return number
    */
-  /*get jogador(): number {
+  get jogador(): number {
   	return this.jogoDaVelhaService.jogador;
   }
 
@@ -111,8 +111,8 @@ export class JogoDaVelhaComponent implements OnInit {
    * 
    * @return void
    */
-  /*novoJogo(): void {
+  novoJogo(): void {
   	this.jogoDaVelhaService.novoJogo();
   
-  */
+  }
 }
